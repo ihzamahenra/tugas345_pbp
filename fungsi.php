@@ -13,28 +13,30 @@ class Buku{
   }
 
   function __construct(){
-    echo 'otomatis <br>';
+    echo "otomatis \n";
   }
 
   static function fungsi_kelas(){
-    echo 'fungsi kelas<br>';
+    echo "fungsi kelas\n";
   }
 
-  function fungsi_instance($nama){
-    echo "fungsi milik instance kelas $nama <br>";
+  function fungsi_instance(){
+    echo "fungsi milik instance kelas $this->penulis \n";
   }
 }
 
 function main(){
-  echo 'hi, ini fungsi main <br>';
-  Buku::fungsi_kelas();
+  echo "hi, ini fungsi main \n";
+  // Buku::fungsi_kelas();
 
   $bukuMatematika = new Buku();
   $bukuMatematika->setPenulis("rian");
+  echo $bukuMatematika->fungsi_instance();
 
-  // $bukuMatematika->fungsi_instance("mtk");
-  // $bukuKimia = new Buku();
-  // $bukuKimia->fungsi_instance("kimia");
+  $bukuBiologi = new Buku();
+  $bukuBiologi->setPenulis("dr. Zaid");
+  echo $bukuBiologi->fungsi_instance();
+
 }
 
 
