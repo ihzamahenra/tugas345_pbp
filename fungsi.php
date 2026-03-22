@@ -5,11 +5,11 @@ class Buku{
   var $judul = "";
   // command function
   function setPenulis($nama){
-    $this->penulis = "Sang penulis $nama"
+    $this->penulis = "Sang penulis $nama";
   }
   // query function
   function getPenulis($nama){
-    return "Penulis: $nama"
+    return "Penulis: $nama";
   }
 
   function __construct(){
