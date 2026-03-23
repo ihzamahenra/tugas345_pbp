@@ -1,3 +1,3 @@
 <?php
-// database
+// lihat folder database
 ?>
