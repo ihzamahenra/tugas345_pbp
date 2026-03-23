@@ -21,7 +21,7 @@ try {
 // ==========================
 // AMBIL DATA FAKULTAS
 // ==========================
-$fakultas = ['fakultas_teknik', 'fakultas_mipa'];
+$fakultas = ['Fakultas_TEKNIK', 'fakultas_mipa','fkm'];
 
 if (empty($fakultas)) {
     die("Data fakultas kosong.");
@@ -40,11 +40,11 @@ function seed_accounts() {
         foreach ($fakultas as $row) {
 
             // Normalisasi nama fakultas (spasi -> underscore, lowercase)
-            $kode_fakultas = strtolower(trim($row));
+            $fakultas = strtolower(trim($row));
 
-            $username = "user_$kode_fakultas";
+            $username = "user_$fakultas";
             // PASSWORD UNIK PER FAKULTAS
-            $plainPassword = $kode_fakultas.bin2hex(random_bytes(3));
+            $plainPassword = $fakultas.bin2hex(random_bytes(3));
             $passwordHash  = password_hash($plainPassword, PASSWORD_BCRYPT, ['cost' => 13]);
 
 
