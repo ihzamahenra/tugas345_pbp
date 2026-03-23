@@ -1,4 +1,10 @@
 Berikut tahapan sistematis menggunakan **PHPUnit** untuk menguji fungsi perhitungan gaji THR:
+1. composer install phpunit
+2. buat file ThrCalculator.php
+3. buat file tests/ThrCalculatorTest.php
+4. jalankan ./vendor/bin/phpunit
+
+
 
 ---
 
@@ -14,8 +20,7 @@ Pastikan struktur dasar:
 
 ```
 project/
-├── src/
-│   └── ThrCalculator.php
+├── ThrCalculator.php
 ├── tests/
 │   └── ThrCalculatorTest.php
 ├── vendor/
