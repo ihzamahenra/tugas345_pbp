@@ -12,7 +12,8 @@ class ThrCalculatorTest extends TestCase
         $calc = new ThrCalculator();
         $masaKerjaBulan = 12;
         $gajiPokok = 5000000;
-        $this->assertEquals(5000000, $calc->hitungThr($gajiPokok, $masaKerjaBulan));
+        $expected = 5000000;
+        $this->assertEquals($expected, $calc->hitungThr($gajiPokok, $masaKerjaBulan));
     }
 
     public function testThrProporsionalUntukKurangDari12Bulan()
@@ -20,7 +21,8 @@ class ThrCalculatorTest extends TestCase
         $calc = new ThrCalculator();
         $masaKerjaBulan = 6;
         $gajiPokok = 5000000;
-        $this->assertEquals(2500000, $calc->hitungThr($gajiPokok, $masaKerjaBulan));
+        $expected = 2500000;
+        $this->assertEquals($expected, $calc->hitungThr($gajiPokok, $masaKerjaBulan));
     }
 
     public function testThrNolJikaMasaKerja0()
@@ -28,6 +30,7 @@ class ThrCalculatorTest extends TestCase
         $masaKerjaBulan = 0;
         $gajiPokok = 5000000;
         $calc = new ThrCalculator();
-        $this->assertEquals(0, $calc->hitungThr($gajiPokok, $masaKerjaBulan));
+        $expected =0;
+        $this->assertEquals($expected, $calc->hitungThr($gajiPokok, $masaKerjaBulan));
     }
 }

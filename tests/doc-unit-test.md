@@ -42,10 +42,15 @@ class ThrCalculator
         if ($masaKerjaBulan >= 12) {
             return $gajiBulanan;
         }
-
+        // prorata
         return ($masaKerjaBulan / 12) * $gajiBulanan;
     }
 }
+
+// $thr = new ThrCalculator()
+// $gaji = 7000000
+// $besaranThr = $thr->hitungThr($gaji, 13)
+// $totalGaji = $besaranThr+$gaji
 ```
 
 ---
