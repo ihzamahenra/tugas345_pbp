@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db   = 'pbp2026';
 $user = 'root';
-$pass = 'password_baru';
+$pass = '';
 
 // ==========================
 // KONFIGURASI DATABASE
